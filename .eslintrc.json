@@ -1,0 +1,29 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "jsx-a11y"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "env": {
+    "es2021": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "ignorePatterns": ["dist", "node_modules"],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "react/react-in-jsx-scope": "off", // si usas React 17+
+    "react/prop-types": "off" // si usas TypeScript
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
